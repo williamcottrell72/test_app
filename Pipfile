@@ -9,6 +9,7 @@ django-heroku = "*"
 requests = "*"
 flask = "*"
 atom = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.6"
