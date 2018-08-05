@@ -1,8 +1,8 @@
 # Kickstarter!!!!!!!!!!!!!!!!!!
-# import numpy as np
-# import pickle
+import numpy as np
+import pickle
 
-# pipeline=pickle.load(open('./model/gscv_rf.pkl','rb'))
+pipeline=pickle.load(open('./model/gscv_rf.pkl','rb'))
 # pipeline=pickle.load(open('./model/dummy.pkl','rb'))
 
 
@@ -37,7 +37,6 @@ def make_prediction(features):
         'prob_succeed': prob}
     return result
 
-print("How about now???")
 
 if __name__ == '__main__':
     print(make_prediction(example))
