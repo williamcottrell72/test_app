@@ -16,21 +16,21 @@ example = {
    'population': 10# float
 }
 
-# def make_prediction(features):
-#     X = np.array([features['population'], features['density'], features['popularity'],
-#                    features['level_num'], features['month'], features['duration'],
-#                    features['goal']]).reshape(1,-1)
-#     prob = pipeline.predict_proba(X)[0, 1]
-    # prob = features['population']+features['density']
-
-print("IS this shit still working????")
-
 def make_prediction(features):
+    X = np.array([features['population'], features['density'], features['popularity'],
+                   features['level_num'], features['month'], features['duration'],
+                   features['goal']]).reshape(1,-1)
+    prob = pipeline.predict_proba(X)[0, 1]
+    prob = features['population']+features['density']
 
-    # X = np.array([features['population'], features['density'], features['popularity'],
-    #                features['level_num'], features['month'], features['duration'],
-    #                features['goal']]).reshape(1,-1)
-    prob = 12
+# print("IS this shit still working????")
+#
+# def make_prediction(features):
+#
+#     # X = np.array([features['population'], features['density'], features['popularity'],
+#     #                features['level_num'], features['month'], features['duration'],
+#     #                features['goal']]).reshape(1,-1)
+#     prob = 12
 
     result = {
         'prediction': int(prob > 0.5),
