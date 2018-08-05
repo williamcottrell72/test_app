@@ -10,8 +10,10 @@ def do_prediction():
 
     data=request.json
     print(data)
+    print("Zup yo")
 
     response=make_prediction(data)
+    print("zuppppppp")
 
 
     return jsonify(response)
