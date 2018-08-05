@@ -11,6 +11,7 @@ flask = "*"
 atom = "*"
 numpy = "*"
 sklearn = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.6"
