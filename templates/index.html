@@ -1,0 +1,84 @@
+<html>
+
+
+<body>
+This is our soon to be **AWESEOME** Kickstarter predictor.
+
+
+<table>
+  <tr>
+    <th>'Project Goal'</th>
+    <th>'Planned Duration' </th>
+    <th>'Month Started'</th>
+    <th>'Number of Levels'</th>
+    <th>'Popularity of Topic'</th>
+    <th>'Density of City'</th>
+    <th>'Population'</th>
+  </tr>
+  <tr>
+    <td><input id='number1' value='3'></td>
+    <td><input id='number2' value='3'></td>
+    <td><input id='number3' value='3'></td>
+    <td><input id='number4'></td>
+    <td><input id='number5'></td>
+    <td><input id='number6'></td>
+    <td><input id='number7'></td>
+  <tr>
+</table>
+
+
+
+
+  <div>
+    <button id = 'submit'>Make prediction</button>
+  </div>
+
+Our prediction is:
+<table>
+  <tr><td> You will </td><td id='hard_predict'></td></tr>
+  <tr><td> Probability </td><td id='soft_predict'></td></tr>
+</table>
+
+
+</body>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+
+  $('#submit').click( () => { cool(); });
+
+  function cool(){
+    let features = {
+      'goal': +$('#number1').val(),
+      'duration':+$('#number2').val(),
+      'month': +$('#number3').val(),
+      'level_num': +$('#number4').val(),
+      'popularity': +$('#number5').val(),
+      'density': +$('#number6').val(),
+      'population':+$('#number7').val()
+    }
+    console.log(features);
+
+    $.ajax({
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      url: "/predict",  // Replace with URL of POST handler
+      dataType: "json",
+      async: true,
+      data: JSON.stringify(features),
+      success: (result) => {
+        $('#hard_predict').html(result['prediction'] ? 'Success' : 'You are a total failure!!!');
+        $('#soft_predict').html(result['prob_succeed']);
+      },
+      error: (result) => {
+        alert('Get your shit toogether man!');
+      }
+    })
+
+
+  }
+
+
+  </script>
+
+<html>
