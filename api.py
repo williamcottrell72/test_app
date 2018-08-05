@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # pipeline=pickle.load(open('./model/gscv_rf.pkl','rb'))
-pipeline=pickle.load(open('./model/dummy.pkl','rb'))
+# pipeline=pickle.load(open('./model/dummy.pkl','rb'))
 
 example = {
   'goal': 3,  # int
