@@ -26,7 +26,7 @@ example = {
 print("IS this shit still working????")
 
 def make_prediction(features):
-    
+
     # X = np.array([features['population'], features['density'], features['popularity'],
     #                features['level_num'], features['month'], features['duration'],
     #                features['goal']]).reshape(1,-1)
@@ -34,8 +34,7 @@ def make_prediction(features):
 
     result = {
         'prediction': int(prob > 0.5),
-        'prob_succeed': prob
-    # }
+        'prob_succeed': prob}
     return result
 
 print("How about now???")
