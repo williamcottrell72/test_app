@@ -13,7 +13,8 @@ def do_prediction():
     print("Zup yo")
 
     response=make_prediction(data)
-    print("zuppppppp")
+    #print("zuppppppp")
+    #print(type(data['city']))
 
 
     return jsonify(response)
