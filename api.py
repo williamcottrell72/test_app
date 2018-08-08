@@ -1,15 +1,17 @@
 # Kickstarter!!!!!!!!!!!!!!!!!!
 import numpy as np
 import pickle
-import pandas
+#import pandas
 
 pipeline=pickle.load(open('./model/gscv_rf.pkl','rb'))
 # pipeline=pickle.load(open('./model/dummy.pkl','rb'))
-df_city=pickle.load(open('./model/city_density.pkl','rb'))
+# df_city=pickle.load(open('./model/city_density.pkl','rb'))
 pop_dct=pickle.load(open('./model/pop_dct','rb'))
+population_dct=pickle.load(open('./model/population_dct','rb'))
+dct_density=pickle.load(open('./model/density_dct','rb'))
 
-dct_density={df_city.iloc[i,0]:df_city.iloc[i,1] for i in range(len(df_city))}
-dct_pop={df_city.iloc[i,0]:df_city.iloc[i,1] for i in range(len(df_city))}
+# dct_density={df_city.iloc[i,0]:df_city.iloc[i,1] for i in range(len(df_city))}
+#dct_pop={df_city.iloc[i,0]:df_city.iloc[i,1] for i in range(len(df_city))}
 
 
 # features['population'], features['density']
@@ -59,17 +61,17 @@ def make_prediction(features):
 
     #print(features['city'])
     cit=features['city']
-    popularity=dct_pop[cit]
+    popularity=pop_dct[features['category']]
 
     mnth=month_conv(features['month2'])
 
 
-
+    population=population_dct[cit]
 
     density=dct_density[cit]
     print(f"The density is {density}")
-    pop=dct_pop[cit]
-    X = np.array([pop, density,popularity,
+
+    X = np.array([population, density,popularity,
                    features['num_levels'], mnth, features['duration2'],
                    features['goal2']]).reshape(1,-1)
     prob = pipeline.predict_proba(X)[0, 1]
