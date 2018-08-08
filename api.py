@@ -1,6 +1,7 @@
 # Kickstarter!!!!!!!!!!!!!!!!!!
 import numpy as np
 import pickle
+import pandas
 
 pipeline=pickle.load(open('./model/gscv_rf.pkl','rb'))
 # pipeline=pickle.load(open('./model/dummy.pkl','rb'))

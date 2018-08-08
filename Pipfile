@@ -12,6 +12,7 @@ atom = "*"
 numpy = "*"
 sklearn = "*"
 scipy = "*"
+pandas= "*"
 
 [requires]
 python_version = "3.6"
