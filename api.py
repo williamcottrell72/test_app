@@ -69,11 +69,10 @@ def make_prediction(features):
     population=population_dct[cit]
 
     density=dct_density[cit]
+
     print(f"The density is {density}")
 
-    X = np.array([population, density,popularity,
-                   features['num_levels'], mnth, features['duration2'],
-                   features['goal2']]).reshape(1,-1)
+    X = np.array([features['goal2'], features['duration2'],mnth,features['num_levels'],popularity,density,population]).reshape(1,-1)
     prob = pipeline.predict_proba(X)[0, 1]
     # prob = features['population']+features['density']
 
