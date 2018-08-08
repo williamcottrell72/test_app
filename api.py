@@ -88,7 +88,7 @@ def make_prediction(features):
 
     result = {
         'prediction': int(prob > 0.5),
-        'prob_succeed': prob}
+        'prob_succeed': round(100*prob,3)}
     return result
 
 

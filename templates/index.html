@@ -99,7 +99,7 @@
            <option value='Music'>Music</option>
            <option value='Photography'>Photography</option>
            <option value='Publishing'>Publishing</option>
-           <option value='Technology'>Publishing</option>
+           <option value='Technology'>Technology</option>
            <option value='Theater'>Theater</option>
           </select>
         </div>
@@ -108,10 +108,10 @@
 
       <div class="form-group">
         <div class="col-xs-3">
-          <label for="proj_goal"><h4><span class=" label label-primary">Project Goal</span></h4></label>
+          <label for="proj_goal"><h4><span class=" label label-primary">Project Goal ($)</span></h4></label>
         </div>
         <div class="col-xs-2">
-          <input id="goal">
+          <input id="goal" value=10000>
 
 
         </div>
@@ -119,10 +119,10 @@
 
       <div class="form-group">
         <div class="col-xs-3">
-          <label for="duration"><h4><span class=" label label-primary">Duration</span></h4></label>
+          <label for="duration"><h4><span class=" label label-primary">Duration (months)</span></h4></label>
         </div>
         <div class="col-xs-2">
-          <input id="duration">
+          <input id="duration" value=6>
 
         </div>
       </div>
@@ -159,7 +159,7 @@
           <label for="levels"><h4><span class=" label label-primary">Number of Levels</span></h4></label>
         </div>
         <div class="col-xs-2">
-          <input id="num_levels">
+          <input id="num_levels" value=10>
         </div>
       </div>
 
@@ -168,7 +168,7 @@
           <label for="city"><h4><span class=" label label-primary">City</span></h4></label>
         </div>
         <div class="col-xs-2">
-          <input id="city">
+          <input id="city" value='Portland, OR'>
         </div>
       </div>
 
@@ -191,7 +191,7 @@
   </div>
 
   <div>
-    <button id = 'submit'>Drum Roll Please</button>
+    <button id = 'submit'><font size="12">Drum Roll Please</font></button>
   </div>
 </div>
 
@@ -211,7 +211,7 @@
 <font size="10">Our prediction is:</font>
 <table>
   <tr><td><font size="8" id='hard_predict'></td></tr>
-  <tr><td><font size="8"> Success Probability: </font></td><td id='soft_predict'></td></tr>
+  <tr><td><font size="8"> Success Probability (%): </font><font size="10" id='soft_predict'> </td></tr>
 </table>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
