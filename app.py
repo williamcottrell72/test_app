@@ -1,7 +1,7 @@
 from flask import Flask, abort, render_template, jsonify, request
 from api import make_prediction
 
-app=Flask('KickstarterApp')
+app=Flask('TravelApp')
 
 @app.route('/predict',methods=['POST'])
 def do_prediction():
