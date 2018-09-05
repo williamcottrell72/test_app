@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kickstarting Ass</title>
+    <title>TravelApp</title>
     <!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -24,13 +24,13 @@
 <!-- {background-image: url("/static/images/cat-card-samples_x1.png"); -->
 <style>
   body
-  {background-color:white;}
+  {background-color:green;}
 </style>
 
 <style>
   div.jumbotron
   {color:blue;
-   background-color: pink}
+   background-color: orange}
 </style>
 
 <body>
@@ -76,124 +76,61 @@
 </div>
 
 <div class="container">
-
   <div class="row">
-
-
-
     <div class="col-sm-6">
+
+
+
       <div class="form-group">
-        <div class="col-xs-3">
-          <label for="category"><h4><span class=" label label-primary">Category</span></h4></label>
+        <div><font size="10">Nature</font></div>
+        <div>
+          <form name="registrationForm">
+            <input type="range" name="ageInputName" id="nature" value="24" min="1" max="100" oninput="ageOutputId.value = nature.value">
+            <output name="ageOutputName" id="ageOutputId">24</output>
+          </form>
         </div>
-        <div class="col-xs-2">
-          <select id="category" class="form-control input-lg" autocomplete="off">
-           <option value='Art'>Arts</option>
-           <option value='Comics'>Comics</option>
-           <option value='Dance'>Dance</option>
-           <option value='Design'>Design</option>
-           <option value='Fashion'>Fashion</option>
-           <option value='Film & Video'>Film and Video</option>
-           <option value='Food'>Food</option>
-           <option value='Games'>Games</option>
-           <option value='Music'>Music</option>
-           <option value='Photography'>Photography</option>
-           <option value='Publishing'>Publishing</option>
-           <option value='Technology'>Technology</option>
-           <option value='Theater'>Theater</option>
-          </select>
+      </div>
+
+      <div class="form-group">
+        <div><font size="10">History</font></div>
+        <div>
+          <form name="registrationForm">
+            <input type="range" name="ageInputName" id="history" value="24" min="1" max="100" oninput="ageOutputId.value = history.value">
+            <output name="ageOutputName" id="ageOutputId">24</output>
+          </form>
         </div>
       </div>
 
 
       <div class="form-group">
-        <div class="col-xs-3">
-          <label for="proj_goal"><h4><span class=" label label-primary">Project Goal ($)</span></h4></label>
-        </div>
-        <div class="col-xs-2">
-          <input id="goal" value=10000>
-
-
+        <div><font size="10">Culture</font></div>
+        <div>
+          <form name="registrationForm">
+            <input type="range" name="ageInputName" id="culture" value="24" min="1" max="100" oninput="ageOutputId.value = culture.value">
+            <output name="ageOutputName" id="ageOutputId">24</output>
+          </form>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-3">
-          <label for="duration"><h4><span class=" label label-primary">Duration (months)</span></h4></label>
-        </div>
-        <div class="col-xs-2">
-          <input id="duration" value=6>
-
+        <div><font size="10">Life</font></div>
+        <div>
+          <form name="registrationForm">
+            <input type="range" name="ageInputName" id="life" value="24" min="1" max="100" oninput="ageOutputId.value = life.value">
+            <output name="ageOutputName" id="ageOutputId">24</output>
+          </form>
         </div>
       </div>
-
 
     </div>
-
-      <div class="col-sm-6">
-      <div class="form-group">
-        <div class="col-xs-3">
-          <label for="month_started"><h4><span class=" label label-primary">Month Started</span></h4></label>
-        </div>
-        <div class="col-xs-2">
-          <select id="month" class="form-control input-lg" autocomplete="off">
-           <option value='Jan'>January</option>
-           <option value='Feb'>February</option>
-           <option value='Mar'>March</option>
-           <option value='Apr'>April</option>
-           <option value='May'>May</option>
-           <option value='June'>June</option>
-           <option value='July'>July</option>
-           <option value='Aug'>August</option>
-           <option value='Sep'>September</option>
-           <option value='Oct'>October</option>
-           <option value='Nov'>November</option>
-           <option value='Dec'>December</option>
-          </select>
-        </div>
-      </div>
-
-
-      <div class="form-group">
-        <div class="col-xs-3">
-          <label for="levels"><h4><span class=" label label-primary">Number of Levels</span></h4></label>
-        </div>
-        <div class="col-xs-2">
-          <input id="num_levels" value=10>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-xs-3">
-          <label for="city"><h4><span class=" label label-primary">City</span></h4></label>
-        </div>
-        <div class="col-xs-2">
-          <input id="city" value='Portland, OR'>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-xs-3">
-          <label for="funsies"><h4><span class=" label label-primary">Slidy</span></h4></label>
-        </div>
-        <div class="slidercontainer">
-
-          <input type="range" min="1" max="100" step="0.50" class="slider" id="fare">
-
-
-        </div>
-        <div>   'fare' </div>
-      </div>
-
-
-
-
-    </div>
-
   </div>
 
+
+
+
+
   <div>
-    <button id = 'submit'><font size="12">Drum Roll Please</font></button>
+    <button id = 'submit'><font size="12">Get recommendations</font></button>
   </div>
 </div>
 
@@ -214,6 +151,7 @@
 <table>
   <tr><td><font size="8" id='hard_predict'></td></tr>
   <tr><td><font size="8"> Success Probability (%): </font><font size="10" id='soft_predict'> </td></tr>
+  <tr><td><font size="12" id='nature'></td></tr>
 </table>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -230,20 +168,10 @@
 
   function cool(){
     let features = {
-      'goal':+$('#number1').val(),
-      'duration':+$('#number2').val(),
-      'month': +$('#number3').val(),
-      'level_num': +$('#number4').val(),
-      'popularity': +$('#number5').val(),
-      'density': +$('#number6').val(),
-      'population':+$('#number7').val(),
-      'category':$('#category').val(),
-      'num_levels':+$('#num_levels').val(),
-      'city':$('#city').val(),
-      'month2':$('#month').val(),
-      'duration2':+$('#duration').val(),
-      'goal2':+$('#goal').val(),
-      'fare':+$('#fare').val(),
+      'nature':+$('#nature').val(),
+      'history':+$('#history').val(),
+      'culture': +$('#culture').val(),
+      'life': +$('#life').val(),
     }
     console.log(features);
 
@@ -257,6 +185,7 @@
       success: (result) => {
         $('#hard_predict').html(result['prediction'] ? 'Success!' : 'You are a total failure!!!');
         $('#soft_predict').html(result['prob_succeed']);
+        $('#nature').html(result['nature']);
       },
       error: (result) => {
         alert('Get your shit toogether man!');
